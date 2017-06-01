@@ -3,10 +3,10 @@ import commonjs from 'rollup-plugin-commonjs'
 import resolve from 'rollup-plugin-node-resolve'
 
 export default {
-  entry: 'src/State.js',
-  dest: 'dist/State.js',
+  entry: 'src/Storage.js',
+  dest: 'dist/Storage.js',
   format: 'umd',
-  moduleName: 'svc-state',
+  moduleName: 'svc-storage',
   plugins: [
     babel({
       babelrc: false,
