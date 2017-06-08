@@ -1,5 +1,5 @@
 import test from 'ava'
-import Storage from '../'
+import {Storage} from '../'
 
 test('simple', async t => {
   let s = new Storage()

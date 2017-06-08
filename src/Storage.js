@@ -1,21 +1,4 @@
-// a storage from memory
-class _MemoryStorage {
-  constructor () {
-    this.data = {}
-  }
-
-  getItem (key) {
-    return this.data[key]
-  }
-
-  setItem (key, value) {
-    this.data[key] = value
-  }
-
-  removeItem (key) {
-    delete this.data[key]
-  }
-}
+let MemoryStorageProvider = require('./providers/MemoryStorageProvider')
 
 class Storage {
   constructor () {
@@ -26,7 +9,7 @@ class Storage {
 
   _makePromise (method, args) {
     if (!this._provider) {
-      this._provider = new _MemoryStorage()
+      this._provider = new MemoryStorageProvider()
     }
     if (typeof args[0] !== 'object') {
       args[0] = this._prefix + args[0]

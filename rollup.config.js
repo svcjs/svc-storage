@@ -3,7 +3,7 @@ import commonjs from 'rollup-plugin-commonjs'
 import resolve from 'rollup-plugin-node-resolve'
 
 export default {
-  entry: 'src/Storage.js',
+  entry: 'src/index.js',
   dest: 'dist/Storage.js',
   format: 'umd',
   moduleName: 'svc-storage',

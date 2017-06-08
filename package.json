@@ -1,8 +1,8 @@
 {
   "name": "svc-storage",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a storage freamwork",
-  "main": "src/Storage.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/svcjs/svc-storage.git"
