@@ -4,8 +4,11 @@ import resolve from 'rollup-plugin-node-resolve'
 
 export default {
   entry: 'src/index.js',
-  dest: 'dist/Storage.js',
-  format: 'umd',
+  targets: [
+    { dest: 'dist/svc-storage.js', format: 'umd' },
+    { dest: 'dist/svc-storage.cjs.js', format: 'cjs' },
+    { dest: 'dist/svc-storage.es.js', format: 'es' }
+  ],
   moduleName: 'svc-storage',
   plugins: [
     babel({

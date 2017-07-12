@@ -1,8 +1,10 @@
 {
   "name": "svc-storage",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "a storage freamwork",
-  "main": "src/index.js",
+  "main": "dist/svc-storage.cjs.js",
+  "module": "dist/svc-storage.es.js",
+  "jsnext:main": "dist/svc-storage.es.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/svcjs/svc-storage.git"
@@ -19,9 +21,19 @@
   "scripts": {
     "lint": "standard --fix rollup.config.js test/** src/**",
     "test": "nyc ava test/*.js",
-    "test-watch": "watch -p '+(test|src)/*.js' -c 'ava test/*.js'",
-    "build": "rm -rf dist && rollup -c",
-    "build-min": "uglifyjs ./dist/Storage.js -o ./dist/Storage.min.js -c warnings=false -m"
+    "test-watch": "watch -p '+(test|src)/**/*.js' -c 'ava test/*.js'",
+    "build": "rm -rf dist && rollup -c && uglifyjs ./dist/svc-storage.js -o ./dist/svc-storage.min.js -c warnings=false -m",
+    "test-build": "chmod +x test.sh && ./test.sh dist/svc-storage.cjs && ./test.sh dist/svc-storage.es && ./test.sh dist/svc-storage && ./test.sh dist/svc-storage.min && ./test.sh",
+    "build-all": "npm run lint && npm run test && npm run build && npm run test-build"
+  },
+  "ava": {
+    "require": "babel-register",
+    "babel": "inherit"
+  },
+  "babel": {
+    "plugins": [
+      "transform-es2015-modules-commonjs"
+    ]
   },
   "devDependencies": {
     "ava": "^0.19.1",

@@ -1,3 +1,4 @@
-let Storage = require('./Storage')
+import Storage from './Storage'
+import SyncedStorageProvider from './providers/SyncedStorageProvider'
 
-module.exports = {Storage: Storage}
+export { Storage, SyncedStorageProvider }

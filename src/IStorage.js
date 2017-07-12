@@ -1,4 +1,4 @@
-class IStorage {
+export default class IStorage {
   setPrefix (prefix) {
   }
 
@@ -14,5 +14,3 @@ class IStorage {
   remove (keyOrKeys) {
   }
 }
-
-module.exports = IStorage
