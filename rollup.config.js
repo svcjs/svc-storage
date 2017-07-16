@@ -9,7 +9,7 @@ export default {
     { dest: 'dist/svc-storage.cjs.js', format: 'cjs' },
     { dest: 'dist/svc-storage.es.js', format: 'es' }
   ],
-  moduleName: 'svc-storage',
+  moduleName: 'svcStorage',
   plugins: [
     babel({
       babelrc: false,

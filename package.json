@@ -1,6 +1,6 @@
 {
   "name": "svc-storage",
-  "version": "0.0.6",
+  "version": "0.1.1",
   "description": "a storage freamwork",
   "main": "dist/svc-storage.cjs.js",
   "module": "dist/svc-storage.es.js",

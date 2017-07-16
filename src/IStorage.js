@@ -5,10 +5,10 @@ export default class IStorage {
   setProvider (provider, isAsync) {
   }
 
-  load (keyOrKeys) {
+  get (keyOrKeys) {
   }
 
-  save (keyOrValues, value) {
+  set (keyOrValues, value) {
   }
 
   remove (keyOrKeys) {
